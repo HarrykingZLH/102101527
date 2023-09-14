@@ -7,13 +7,13 @@ import pandas as pd
 def cloud_making():
     try:
         stylecloud.gen_stylecloud(file_path='danmu.txt',  # 存储弹幕的文件位置
-                                  icon_name='fas fa-radiation',  # 云图图标
+                                  icon_name='fas fa-dog',  # 云图图标
                                   palette='cmocean.diverging.Balance_6',  # 调色板
                                   font_path="msyh.ttc",  # 字体信息
-                                  background_color='white',  # 背景颜色
+                                  background_color='black',  # 背景颜色
                                   output_name='cloud.jpg',  # 输出图片文件名
                                   gradient='horizontal',  # 渐变
-                                  invert_mask=True,  # 是否反转
+                                  invert_mask=False,  # 是否反转
                                   size=2048,  # 图片大小
                                   )
     except Exception as e:
@@ -24,7 +24,7 @@ def chart_making(labels, values):
     try:
         plt.rc("font", family='YouYuan')  # 设置字体防止乱码
         _, ax = plt.subplots(figsize=(12, 6))  # 创建一个图表
-        sns.barplot(x=labels, y=values, ax=ax, color='blue')  # 绘制柱状图
+        sns.barplot(x=labels, y=values, ax=ax, color='red')  # 绘制柱状图
         ax.set_title("弹幕频次前20")
         ax.set_xlabel("弹幕")
         ax.set_ylabel("频次")

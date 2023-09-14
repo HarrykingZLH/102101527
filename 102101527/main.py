@@ -20,6 +20,7 @@ def main(urls):
 
 if __name__ == '__main__':
     try:
+
         time_start = time.time()  # 记录开始时间
         keyword = '日本核污染水排海'  # 设置搜索关键词
         n = 300  # 设置总视频数
